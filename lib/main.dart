@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// Modul Praktikum 1 - Penyiapan Lingkungan Pengembangan Flutter
+
 void main() {
   runApp(const MyApp());
 }
