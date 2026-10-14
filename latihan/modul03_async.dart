@@ -17,7 +17,6 @@ final Map<String, String> basisResiAsync = {
 };
 
 Future<String> ambilStatusKiriman(String resi) async {
-  // Simulasi jeda jaringan selama dua detik
   await Future.delayed(const Duration(seconds: 2));
   final kota = basisResiAsync[resi];
   if (kota == null) {
