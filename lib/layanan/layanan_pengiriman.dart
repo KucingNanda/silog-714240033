@@ -11,6 +11,14 @@ mixin Terlacak {
       _riwayat.isEmpty ? 'Belum ada data posisi' : _riwayat.last;
 }
 
+mixin Terasuransi {
+  double get persentasePremi => 0.0025;
+
+  double hitungPremi(double nilaiBarang) {
+    return nilaiBarang * persentasePremi;
+  }
+}
+
 abstract class LayananPengiriman {
   final String kodeLayanan;
   final double jarakKm;

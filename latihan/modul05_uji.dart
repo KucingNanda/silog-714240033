@@ -25,6 +25,14 @@ void main() {
       beratKg: 1200,
       volumeM3: 8.5,
     ),
+    PengirimanUdara(
+      kodeLayanan: 'UDR-CARGO',
+      jarakKm: 780,
+      beratKg: 25,
+      panjangCm: 60,
+      lebarCm: 50,
+      tinggiCm: 40,
+    ),
   ];
 
   print('=== Perbandingan Layanan Pengiriman ===');
@@ -50,4 +58,17 @@ void main() {
     print(' $r');
   }
   print('Posisi terakhir: ${truk.posisiTerakhir()}');
+
+  // Pemanfaatan mixin Terasuransi
+  final kapal = daftarLayanan.whereType<PengirimanKapal>().first;
+  final premiKapal = kapal.hitungPremi(50000000);
+  print(
+    '\nPremi asuransi ${kapal.kodeLayanan}: Rp${premiKapal.toStringAsFixed(0)}',
+  );
+
+  final udara = daftarLayanan.whereType<PengirimanUdara>().first;
+  final premiUdara = udara.hitungPremi(50000000);
+  print(
+    'Premi asuransi ${udara.kodeLayanan}: Rp${premiUdara.toStringAsFixed(0)}',
+  );
 }

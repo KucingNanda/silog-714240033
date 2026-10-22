@@ -25,13 +25,13 @@ class Pengiriman {
   }) : _status = status;
 
   /// Konstruktor bernama untuk pengiriman yang baru didaftarkan hari ini.
-    Pengiriman.baru({
-      required this.resi,
-      required this.asal,
-      required this.kotaTujuan,
-      required this.barang,
-      required this.pelanggan,
-      required this.jumlah,
+  Pengiriman.baru({
+    required this.resi,
+    required this.asal,
+    required this.kotaTujuan,
+    required this.barang,
+    required this.pelanggan,
+    required this.jumlah,
   }) : tanggalKirim = DateTime.now(),
        _status = 'Menunggu Pickup';
 
